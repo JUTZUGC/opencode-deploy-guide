@@ -1,0 +1,108 @@
+{
+  "owner": "JUTZUGC",
+  "code": "JUTZUGC",
+  "project": {
+    "key": "opencode",
+    "nameCn": "OpenCode",
+    "repoName": "opencode-deploy-guide",
+    "oneLiner": "AI 编程 Agent，终端 TUI 为主、桌面端为辅",
+    "officialRepo": "https://github.com/anomalyco/opencode",
+    "officialDocs": "https://opencode.ai/v2/docs",
+    "stars": "221.9k",
+    "license": "MIT",
+    "highlights": [
+      "双 Agent：build 改代码，plan 只读分析与规划",
+      "终端 TUI：文件、命令、Diff 都在一个界面里",
+      "模型：多家供应商与订阅，可自定义 provider",
+      "扩展：MCP、自定义 Agent、插件与主题",
+      "形态：CLI / TUI / 桌面端（Beta）",
+      "中文：自带简体中文 README 与多语言文档"
+    ],
+    "mcpSupport": "OpenCode 支持 MCP，可把外部工具接进 Agent 会话。本仓库的 MCP 只提供安装、模型配置与常见坑。",
+    "webuiUrl": "",
+    "adapterPorts": "",
+    "collectedAt": "2026-10-26",
+    "verification": [
+      [
+        "npm 包 @opencode/cli 版本 2.1.4 已核对",
+        "已验证 2026-10-26"
+      ],
+      [
+        "Windows 上 npx @opencode/cli@latest --version 实测输出 opencode v2.1.4",
+        "已验证 2026-10-26"
+      ],
+      [
+        "官方安装脚本（macOS / Linux）与桌面端产物已通读，未在对应系统实装",
+        "已核对 2026-10-26"
+      ],
+      [
+        "MCP 服务握手与工具列表（initialize / tools/list）",
+        "已验证 2026-10-26"
+      ],
+      [
+        "非目标宿主调用被拦截（HOST_NOT_ALLOWED）",
+        "已验证 2026-10-26"
+      ]
+    ],
+    "deploy": {
+      "type": "script",
+      "steps": [
+        "curl -fsSL https://opencode.ai/v2/install | bash",
+        "export PATH=\"$HOME/.opencode/bin:$PATH\"",
+        "command -v opencode >/dev/null 2>&1 || { echo \"安装后没找到 opencode，请把 ~/.opencode/bin 加入 PATH\"; exit 1; }",
+        "opencode --version"
+      ],
+      "stepsPs": [
+        "if (-not (Get-Command npm.cmd -ErrorAction SilentlyContinue)) { throw '需要先安装 Node.js（含 npm）' }",
+        "npm.cmd i -g @opencode/cli@latest",
+        "$env:Path = \"$env:APPDATA\\npm;$env:Path\" ; opencode --version"
+      ],
+      "source": "https://github.com/anomalyco/opencode#installation"
+    },
+    "pitfalls": [
+      "命令找不到：把 `~/.opencode/bin` 加入 PATH，或重开终端",
+      "Windows 装不上：先确认 Node.js 与 npm 可用，再用 `npm i -g @opencode/cli@latest`",
+      "模型连不上：进 `opencode auth login` 重新登录，或检查 provider 配置",
+      "旧版本冲突：先卸载 0.1.x 之前的版本再装",
+      "担心误改代码：先用 plan 模式，确认方案后再切 build",
+      "桌面端和 CLI 版本不一致：两者分开发版，按各自渠道更新",
+      "远程服务器：TUI 要能交互，建议本地跑，不要挂在不稳定 SSH 上"
+    ]
+  },
+  "gate": {
+    "allow": [
+      "dumate"
+    ],
+    "label": "百度搭子",
+    "url": "https://www.dumate.cn/",
+    "guideUrl": "https://github.com/JUTZUGC/opencode-deploy-guide",
+    "howToFix": [
+      "1. 打开 https://www.dumate.cn/ ，下载并安装「百度搭子」电脑端（Windows / macOS）",
+      "2. 用账号登录",
+      "3. 在对话窗口发送：你好，帮我从 github 部署 JUTZUGC/opencode-deploy-guide 到我的电脑上",
+      "4. 部署完成后，在同一对话窗口里继续使用"
+    ],
+    "hint": "请改用「百度搭子」部署后再使用；本工具没有网页版入口。",
+    "onError": "allow"
+  },
+  "keywords": [
+    "OpenCode 部署",
+    "OpenCode 安装教程",
+    "开源 AI 编程 Agent",
+    "终端 AI 编程",
+    "Claude Code 替代",
+    "Codex 替代",
+    "OpenCode 中文",
+    "AI 写代码 CLI",
+    "TUI 编程助手",
+    "opencode deploy guide"
+  ],
+  "topics": [
+    "ai-agents",
+    "coding-agent",
+    "cli",
+    "terminal",
+    "typescript",
+    "mcp"
+  ]
+}
