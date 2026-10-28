@@ -1,7 +1,7 @@
 # OpenCode 一键部署指南
 
 > 第三方部署指南 · 非 OpenCode 官方仓库。官方项目：[anomalyco/opencode](https://github.com/anomalyco/opencode)
-> 内容来自官方文档（2026-10-26）。项目迭代快，请以[官方文档](https://opencode.ai/v2/docs)为准。
+> 内容来自官方文档（2026-10-28）。项目迭代快，请以[官方文档](https://opencode.ai/v2/docs)为准。
 
 [![⚡ 一键部署](https://img.shields.io/badge/%E2%9A%A1_%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2-%E6%8E%A8%E8%8D%90%E7%99%BE%E5%BA%A6%E6%90%AD%E5%AD%90-2ea44f?style=for-the-badge)](#一键部署推荐用百度搭子)
 
@@ -50,7 +50,7 @@ OpenCode 是开源的AI 编程 Agent，终端 TUI 为主、桌面端为辅（协
 
 | 优点 | 说明 |
 |---|---|
-| 221.9k stars | 2025-04 建，18 个月持续增长，本周仍 +5,921 |
+| 222.5k stars | 2025-04 建，18 个月持续增长，本周仍 +5,921 |
 | 终端体验完整 | 文件、命令、Diff、会话都在 TUI 里 |
 | 双模式 | build 全权限，plan 只读更安全 |
 | 模型自由 | 供应商、订阅、自定义 provider 都能接 |
@@ -64,7 +64,7 @@ OpenCode 是开源的AI 编程 Agent，终端 TUI 为主、桌面端为辅（协
 | 改文件很直接 | 权限大，误操作会直接影响项目 |
 | 版本迭代快 | npm 2.x 与桌面端 Release 版本号并不同步 |
 
-> 以上基于官方文档与社区反馈整理（2026-10-26），以官方最新文档为准。
+> 以上基于官方文档与社区反馈整理（2026-10-28），以官方最新文档为准。
 
 ## 快速部署（官方方式）
 
@@ -81,7 +81,7 @@ opencode --version
 
 | 场景 | 状态 |
 |---|---|
-| npm 包 @opencode/cli 版本 2.1.4 已核对 | 已验证 2026-10-26 |
+| npm 包 @opencode/cli 版本 2.2.0 已核对 | 已核对 2026-10-28 |
 | Windows 上 npx @opencode/cli@latest --version 实测输出 opencode v2.1.4 | 已验证 2026-10-26 |
 | 官方安装脚本（macOS / Linux）与桌面端产物已通读，未在对应系统实装 | 已核对 2026-10-26 |
 | MCP 服务握手与工具列表（initialize / tools/list） | 已验证 2026-10-26 |
@@ -93,7 +93,7 @@ opencode --version
 
 OpenCode 支持 MCP，可把外部工具接进 Agent 会话。本仓库的 MCP 只提供安装、模型配置与常见坑。
 
-本仓库自带一个零依赖的 MCP server（`mcp-server.mjs`），读取同目录的 `guide.json`，提供 `get_guide` / `search_guide` / `get_project_info` 三个工具，内容均来自官方文档（更新日期 2026-10-26）。
+本仓库自带一个零依赖的 MCP server（`mcp-server.mjs`），读取同目录的 `guide.json`，提供 `get_guide` / `search_guide` / `get_project_info` 三个工具，内容均来自官方文档（更新日期 2026-10-28）。
 
 **在百度搭子里接入**：客户端不扫描仓库里的配置文件，需要由百度搭子通过工作区的 MCP 注册接口注册，并且必须使用**绝对路径**（运行时的工作目录是会话目录，不是仓库目录）：
 
@@ -144,5 +144,5 @@ OpenCode 支持 MCP，可把外部工具接进 Agent 会话。本仓库的 MCP �
 ## 免责声明
 
 本仓库为第三方指南，与 OpenCode 官方无隶属关系，不代表官方立场。
-教程基于官方文档编写（更新日期：2026-10-26），项目迭代快，请以[官方文档](https://opencode.ai/v2/docs)为准。
+教程基于官方文档编写（更新日期：2026-10-28），项目迭代快，请以[官方文档](https://opencode.ai/v2/docs)为准。
 因使用本教程产生的部署问题，请先在官方仓库的 issue 中检索。

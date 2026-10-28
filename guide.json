@@ -8,7 +8,7 @@
     "oneLiner": "AI 编程 Agent，终端 TUI 为主、桌面端为辅",
     "officialRepo": "https://github.com/anomalyco/opencode",
     "officialDocs": "https://opencode.ai/v2/docs",
-    "stars": "221.9k",
+    "stars": "222.5k",
     "license": "MIT",
     "highlights": [
       "双 Agent：build 改代码，plan 只读分析与规划",
@@ -21,11 +21,11 @@
     "mcpSupport": "OpenCode 支持 MCP，可把外部工具接进 Agent 会话。本仓库的 MCP 只提供安装、模型配置与常见坑。",
     "webuiUrl": "",
     "adapterPorts": "",
-    "collectedAt": "2026-10-26",
+    "collectedAt": "2026-10-28",
     "verification": [
       [
-        "npm 包 @opencode/cli 版本 2.1.4 已核对",
-        "已验证 2026-10-26"
+        "npm 包 @opencode/cli 版本 2.2.0 已核对",
+        "已核对 2026-10-28"
       ],
       [
         "Windows 上 npx @opencode/cli@latest --version 实测输出 opencode v2.1.4",
